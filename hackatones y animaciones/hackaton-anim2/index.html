@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2 — 15 min</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="hero">
+      <p class="hero-tag">// ejercicio 2 · IntersectionObserver</p>
+      <h1 class="hero-titulo">APARECE<br /><span>AL</span><br />SCROLLEAR</h1>
+      <p class="hero-sub">
+        Baja por la página. Las tarjetas y los textos deben aparecer con
+        animación cuando entran al viewport. Usa IntersectionObserver — lo mismo
+        que viste en la página modelo para los contadores.
+      </p>
+    </section>
+
+    <section class="seccion-cards">
+      <h2 class="seccion-titulo">LAS TARJETAS<br />TE ESPERAN</h2>
+
+      <div class="grid">
+        <div class="tarjeta">
+          <div class="tarjeta-num">01</div>
+          <h3 class="tarjeta-titulo">OBSERVER</h3>
+          <p class="tarjeta-texto">
+            IntersectionObserver detecta cuándo un elemento entra al área
+            visible del navegador sin necesidad de calcular nada con scrollY.
+          </p>
+          <span class="tarjeta-tag">automático</span>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta-num">02</div>
+          <h3 class="tarjeta-titulo">THRESHOLD</h3>
+          <p class="tarjeta-texto">
+            El threshold indica qué porcentaje del elemento debe ser visible
+            para disparar la animación. 0.2 significa el 20%.
+          </p>
+          <span class="tarjeta-tag">0.2</span>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta-num">03</div>
+          <h3 class="tarjeta-titulo">UNOBSERVE</h3>
+          <p class="tarjeta-texto">
+            Después de agregar la clase .visible, llamamos unobserve para que el
+            observer deje de escuchar ese elemento. Solo aparece una vez.
+          </p>
+          <span class="tarjeta-tag">una vez</span>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta-num">04</div>
+          <h3 class="tarjeta-titulo">CSS HACE<br />EL TRABAJO</h3>
+          <p class="tarjeta-texto">
+            La animación está definida en CSS. JS solo agrega la clase.
+            Separación de responsabilidades: JS maneja lógica, CSS maneja
+            visual.
+          </p>
+          <span class="tarjeta-tag">separación</span>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta-num">05</div>
+          <h3 class="tarjeta-titulo">DELAY<br />ESCALONADO</h3>
+          <p class="tarjeta-texto">
+            Cada tarjeta tiene un transition-delay distinto en CSS. Así aunque
+            JS les agrega la clase al mismo tiempo, aparecen una tras otra.
+          </p>
+          <span class="tarjeta-tag">nth-child</span>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta-num">06</div>
+          <h3 class="tarjeta-titulo">PARA TODAS<br />A LA VEZ</h3>
+          <p class="tarjeta-texto">
+            querySelectorAll devuelve todas las tarjetas. forEach las recorre
+            para que el observer las vigile a todas con un solo bloque de
+            código.
+          </p>
+          <span class="tarjeta-tag">forEach</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-texto">
+      <p class="parrafo-animado">EL SCROLL REVELA</p>
+      <p class="parrafo-animado">LO QUE ESTABA OCULTO</p>
+      <p class="parrafo-animado">DESDE EL PRINCIPIO</p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
