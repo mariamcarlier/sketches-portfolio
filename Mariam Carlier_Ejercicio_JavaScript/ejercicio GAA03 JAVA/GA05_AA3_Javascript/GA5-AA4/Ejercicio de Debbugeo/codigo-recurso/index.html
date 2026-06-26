@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Scroll — Versión con Bugs</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="progress-bar"></div>
+<div class="bug-badge">5 BUGS — Encuéntralos</div>
+
+<nav id="nav">
+  <div class="nav-logo">JS/SCR</div>
+  <div class="nav-links">
+    <a href="#counters">Stats</a>
+    <a href="#cards-section">Efectos</a>
+    <a href="#sticky-section">Sticky</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <h1 class="hero-title">
+    <span class="line-1">SCROLL</span>
+    <span class="line-2">DRIVEN</span>
+    <span class="line-3">JS</span>
+  </h1>
+  <p class="hero-sub">
+    Versión con bugs — encuentra los 5 errores en JavaScript.
+    Parallax, contadores, texto reveal, scroll horizontal y sticky.
+  </p>
+  <div class="hero-scroll-hint">scroll</div>
+</section>
+
+<section id="counters">
+  <div class="counter-item" data-target="128" data-suffix="K">
+    <span class="counter-num">0</span>
+    <span class="counter-label">Líneas de código</span>
+  </div>
+  <div class="counter-item" data-target="99" data-suffix="%">
+    <span class="counter-num">0</span>
+    <span class="counter-label">JavaScript puro</span>
+  </div>
+  <div class="counter-item" data-target="7" data-suffix="">
+    <span class="counter-num">0</span>
+    <span class="counter-label">Efectos de scroll</span>
+  </div>
+  <div class="counter-item" data-target="0" data-suffix=" deps">
+    <span class="counter-num">0</span>
+    <span class="counter-label">Dependencias</span>
+  </div>
+</section>
+
+<section id="cards-section">
+  <p class="section-label">// técnicas</p>
+  <h2 class="section-title">LO QUE<br>VES AQUÍ</h2>
+  <div class="cards-grid">
+    <div class="card" data-parallax="-0.15">
+      <span class="card-num">01</span>
+      <div class="card-icon">↕</div>
+      <h3 class="card-title">PARALLAX</h3>
+      <p class="card-text">Cada tarjeta tiene una velocidad de desplazamiento distinta. Se calcula con getBoundingClientRect() en cada evento scroll.</p>
+      <span class="card-tag">scroll + transform</span>
+    </div>
+    <div class="card" data-parallax="0.1">
+      <span class="card-num">02</span>
+      <div class="card-icon">⏱</div>
+      <h3 class="card-title">CONTADORES</h3>
+      <p class="card-text">Intersection Observer detecta cuando el elemento entra al viewport y dispara una animación de conteo con easing.</p>
+      <span class="card-tag">IntersectionObserver</span>
+    </div>
+    <div class="card" data-parallax="-0.2">
+      <span class="card-num">03</span>
+      <div class="card-icon">→</div>
+      <h3 class="card-title">H. SCROLL</h3>
+      <p class="card-text">El scroll vertical se transforma en movimiento horizontal usando la posición relativa de la sección en el viewport.</p>
+      <span class="card-tag">translateX</span>
+    </div>
+
+    <div class="card" data-parallax="0.05">
+      <span class="card-num">04</span>
+      <div class="card-icon">✦</div>
+      <h3 class="card-title">STICKY</h3>
+      <p class="card-text">position:sticky combinado con JS para mapear el progreso del scroll a animaciones de entrada y escala.</p>
+      <span class="card-tag">sticky + progress</span>
+    </div>
+
+    <div class="card" data-parallax="-0.08">
+      <span class="card-num">05</span>
+      <div class="card-icon">Aa</div>
+      <h3 class="card-title">WORD REVEAL</h3>
+      <p class="card-text">Texto dividido en palabras. Cada una tiene un umbral de visibilidad individual calculado en tiempo real.</p>
+      <span class="card-tag">split text</span>
+    </div>
+    <div class="card" data-parallax="0.18">
+      <span class="card-num">06</span>
+      <div class="card-icon">⊙</div>
+      <h3 class="card-title">CURSOR</h3>
+      <p class="card-text">Cursor personalizado con lag suave usando interpolación lineal (lerp) en requestAnimationFrame.</p>
+      <span class="card-tag">lerp + RAF</span>
+    </div>
+  </div>
+</section>
+
+<section id="horizontal-section">
+  <div>
+    <p class="section-label">// scroll horizontal</p>
+    <h2 class="section-title">ARRASTRA<br>EL SCROLL</h2>
+  </div>
+  <div class="h-scroll-container" id="hscroll">
+    <div class="h-card"><div class="h-card-bg">JS</div><div class="h-card-title">EVENT LISTENERS</div><div class="h-card-sub">El origen de todo</div></div>
+    <div class="h-card"><div class="h-card-bg">∿</div><div class="h-card-title">REQUESTANIMATIONFRAME</div><div class="h-card-sub">60fps garantizados</div></div>
+    <div class="h-card"><div class="h-card-bg">◎</div><div class="h-card-title">INTERSECTION OBSERVER</div><div class="h-card-sub">Nativo del browser</div></div>
+    <div class="h-card"><div class="h-card-bg">XY</div><div class="h-card-title">getBoundingClientRect</div><div class="h-card-sub">Posición exacta</div></div>
+    <div class="h-card"><div class="h-card-bg">⟳</div><div class="h-card-title">LERP INTERPOLATION</div><div class="h-card-sub">Movimiento suave</div></div>
+    <div class="h-card"><div class="h-card-bg">%</div><div class="h-card-title">SCROLL PROGRESS</div><div class="h-card-sub">0 → 1 normalizado</div></div>
+    <div class="h-card"><div class="h-card-bg">CSS</div><div class="h-card-title">CSS CUSTOM PROPS</div><div class="h-card-sub">JS → CSS variables</div></div>
+  </div>
+</section>
+
+<section id="reveal-section">
+  <p class="section-label" style="margin-bottom:3rem">// word reveal</p>
+  <div id="reveal-text"></div>
+</section>
+
+<section id="sticky-section">
+  <div class="sticky-inner">
+    <div class="sticky-bg-circle" id="sticky-circle"></div>
+    <div class="sticky-text">
+      <span class="sticky-line" id="sline1">EL SCROLL</span>
+      <span class="sticky-line" id="sline2">ES PODER</span>
+      <span class="sticky-line" id="sline3" style="color:var(--accent)">EN JS</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Versión 5 bugs ocultos</span>
+  <span>¿Puedes encontrarlos todos?</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

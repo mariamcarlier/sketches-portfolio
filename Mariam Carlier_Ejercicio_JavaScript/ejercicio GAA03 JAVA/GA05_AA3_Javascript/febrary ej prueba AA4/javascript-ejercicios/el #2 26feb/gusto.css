@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(255, 248, 238);
+    color: rgb(36, 0, 0);
+}
+
+.titulo{
+    color: rgb(226, 172, 231);
+    margin: 0 40px;
+    text-align: center;
+}
+
+
+.contenedor{
+    display: flex;
+    width: 1100px;
+    margin: 40px auto;
+
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: repeat(4, 250px);
+    gap: 30px;
+
+    justify-content: center;
+    
+}
+
+.tarjeta{
+    background: olive;
+    width: 300px;
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid rgb(226, 172, 231);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+    
+}
+
+.tarjetavisible{
+    opacity: 1;
+    transform: translateY(0);
+}

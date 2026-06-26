@@ -1,0 +1,25 @@
+/* ----PRIMERA PARTE ----- */
+
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+}

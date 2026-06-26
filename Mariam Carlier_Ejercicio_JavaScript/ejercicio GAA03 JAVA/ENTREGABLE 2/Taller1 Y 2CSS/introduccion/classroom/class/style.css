@@ -1,0 +1,61 @@
+/* --- Buen dia aprendiz en este ejercicio tiene varios características de css para editar enlazado al html de indice--- */
+
+body {
+    /* Propiedades del texto general de nuestra página */
+    background-color:beige;
+    color:rgb(194, 154, 231) ;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    /* Color en formato hexadecimal o nombre */
+    color:rgb(59, 32, 83);
+    /* Tamaño de la letra */
+    font-size: 35px;
+    /* Alineación: left, center, right */
+    text-align:center;
+    /* Decoración: underline, none, overline */
+    text-decoration:underline;
+    text-transform: uppercase; /* Todo en mayúsculas */
+}
+
+.subtitulo {
+    font-style:40px;
+    text-align:center;
+    color:rgb(33, 3, 39);
+}
+
+/* --- ESTILOS DE IMAGEN --- */
+
+.FOTO {
+    /* Controla el ancho. 'auto' en altura mantiene la proporción */
+    width:300px ;
+    max-width:100% ;
+    height:auto ;
+
+    /* Bordes: grosor, estilo (solid, dashed, dotted) y color */
+    border: 4px solid 34345;
+    
+    /* Bordes redondeados aplicable no solo para imagenes sino para contenedores*/
+    border-radius: 20px ;
+
+    /* Centrar una imagen (necesita display block y margin auto) */
+    display:block ;
+    margin:20px auto ;
+
+    /* Efectos extra para experimentar */
+    box-shadow:0px 4px 12px rgba(0,0,0.3) ; /* Sombra */
+    filter: grayscale(0%) ; /* Prueba cambiar a 100% para blanco y negro */
+}
+
+
+/* --- CONTENEDOR --- */
+.contenedor {
+    max-width:900px ;
+    margin:40px auto ;
+    background:#FFFF ;
+    padding: 30PX ;
+    border-radius:15PX ;
+}

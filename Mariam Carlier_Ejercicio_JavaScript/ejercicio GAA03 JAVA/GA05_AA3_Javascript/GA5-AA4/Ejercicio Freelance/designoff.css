@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.897);
+    backdrop-filter: blur(5px);
+    display: flex;
+    position: sticky; /* Hace que el menú se quede pegado arriba */
+    top: 0;
+    z-index: 1000; /* Asegura que el menú siempre esté por encima de todo */
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.contenedor nav {
+     display: flex;
+     gap: 20px;
+}
+
+.contenedor nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: bold ;
+    transition: color , 0.4s ease;      
+}
+
+nav a :hover {
+    color: rgb(28, 77, 241);
+
+}
+
+.pantalla-completa {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* El efecto parallax (FONDO FIJO) */
+.banner-principal {
+     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                          url(im/bannneradidas.avif);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;  
+    background-attachment: fixed; 
+}
+
+.titulo-1{
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.808);
+    -webkit-text-stroke: 2px rgb(0, 0, 0); 
+}
+
+/*FONDOS PARA LAS OTRAS SECCIONES
+   (Para que tapen la imagen al hacer scroll)*/
+.contenido-oscuro {
+    background-color: #111; /* Un gris casi negro */
+    color: white;
+}
+
+.contenido-claro {
+    background-color: #f4f4f4; /* Un gris muy clarito */
+    color: black;
+}
+
+/* --- CARRUSEL CORREGIDO --- */
+/*.carousel-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+    margin-top: 40px;
+}*/
+
+.carousel {
+    width: 90%;
+    overflow-x: auto;
+    margin: 3em auto ;
+    display: flex;
+    gap: 1em;
+    
+    scroll-behavior: smooth;
+   scroll-snap-type: x mandatory;
+   }
+
+.carousel::scroll-marker-group{
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+
+.carousel::scroll-marker{
+    content: "";
+    height: 1em;
+    width: 1em;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+.card::scroll-marker:target-current{
+    background-color: var(--brand-color);
+}
+
+/* Ocultar barra de scroll */
+.carousel::-webkit-scrollbar { 
+    display: none; 
+}
+
+.carousel::scroll-button(right), .carousel::scroll-button(left)  
+{
+    content: "→";
+    border: none;
+    background-color: black;
+    font-size: 3rem;
+    color: rgb(47, 0, 255);
+    height: 60px;
+    height: 60px;
+    padding-bottom: .1rem;
+    cursor: pointer;
+    position: fixed ;
+    position-area: right center ;
+    translate: -50%;
+}  
+
+.carousel::scroll-button(left) {
+    content: " ←";
+    position-area: left center;
+     translate: 50%;
+}
+
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
+ opacity: 0.5;
+ cursor: auto;
+}
+
+.card {
+    scroll-snap-type: start;
+    flex: 0 0 340px; /* Ancho fijo para las tarjetas */
+    height: 450px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    scroll-snap-align: center; /* Se alinea al centro de la pantalla */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+}
+
+.card:hover { transform: translateY(-15px); }
+
+.card h3 {
+    padding: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la zapatilla sin deformarla */
+    background-color: #f9f9f9;
+}
+
+/* --- MARCADORES (PUNTOS BAJO EL CARRUSEL) --- */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.marker {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.marker:first-child { background-color: black; width: 30px; border-radius: 10px; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .card { flex: 0 0 85%; }
+    .titulo-1 { font-size: 4rem; }
+}
