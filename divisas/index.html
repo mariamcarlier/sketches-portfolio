@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Divisas</title>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <header>
+        <h1>Dashboard de Cotización de Divisas</h1>
+
+
+        <div class="actualizar-cotizaciones">
+            <button id="btn-actualizar" class="btn-actualizar">
+                Actualizar cotizaciones
+            </button>
+
+            <div id="alerta-actualizacion" class="alerta-actualizar oculto">
+                Actualizando...</div>
+        </div>
+    </header>
+
+
+    <main class="dashboard-main">
+
+        <section class="cards-grid">
+
+            <article class="tarjeta-divisa usd">
+                <h2>Dólar Estadounidense</h2>
+                <p class="nombre-divisa">USD / COP</p>
+                <span id="out-dolar" class="precio-divisa">$4.000 COP</span>
+            </article>
+
+
+            <article class="tarjeta-divisa eur">
+                <h2>Euro</h2>
+                <p class="nombre-divisa">EUR / COP</p>
+                <span id="out-euro" class="precio-divisa">$4.350 COP</span>
+            </article>
+
+
+            <article class="tarjeta-divisa btc">
+                <h2>Bitcoin</h2>
+                <p class="nombre-divisa">BTC / USD</p>
+                <span id="out-bitcoin" class="precio-divisa">$105.000 USD</span>
+            </article>
+
+
+            <article class="tarjeta-divisa gbp">
+                <h2>Libra Esterlina</h2>
+                <p class="nombre-divisa">GBP / COP</p>
+                <span id="out-libra" class="precio-divisa">£5.200 COP</span>
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Proyecto desarrollado por Mariam ADSO |
+            SENA - Análisis y Desarrollo de Software |
+            21 Julio 2026
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+
+</html>

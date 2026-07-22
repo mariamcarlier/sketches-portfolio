@@ -1,0 +1,143 @@
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fcfcf8, #e0dbbc);
+    color:#1f2937;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+.header h1{
+    font-size: 2rem;
+    margin: 0;
+    color:#1e3a8a;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header p{
+    margin-top: 10px;
+    color:#64748b;
+    font-size: 1.1rem;
+}
+
+
+.dashboard-main{
+    display: flex;
+    flex: 1;
+    direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+
+.contenedor-tarjetas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+
+
+.tarjeta-divisa{
+    background-color: rgba(255, 255, 255, 0.534);
+    min-width: 280px;
+    width: 300px;
+    text-align: center;
+    box-shadow: var(0 8px 20px rgba
+    (0, 0, 0, 0.15));
+    transition: all 0.3s ease;
+    color: black;
+    border-radius: 20px;
+}
+
+
+.tarjeta-divisa:hover{
+    transform: translateY(-4px);
+    box-shadow:0 12px 24px rgba(0, 0, 0, 0.2) ;
+}
+
+
+.tarjeta-divisa h2{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color:#333;
+    margin-bottom: 10px;
+}
+
+.nombre-divisa{
+    color: #777;
+}
+
+
+.precio-divisa{
+    font-size: 2rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color:#ebcd25;
+
+
+}
+
+.contenedor-tarjetas{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-actualizar{
+    background-color: #DAA520;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: block;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.actualizar-cotizaciones{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.actualizar:hover{
+    align-items: center;
+
+}
+
+.boton-hover:hover{
+    background-color: #d8ac1d;
+}
+.oculto{
+    display: none;
+}
+
+
+.alerta-actualizar{
+    width: 100%;
+    text-align: center;
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+footer{
+    text-align: center;
+    padding: 20px;
+}
