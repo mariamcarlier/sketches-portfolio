@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <h1> Formularios </h1>
+    <!-- 1 esta es una sugerencia de aplicacion de la etiqueta form -->
+     
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <br>
+    <hr>  <!-- horizontal rule -->
+    <br> <!-- break line -->
+
+    <!-- 2 INTERFAZ DOM -->
+     <!-- Formulario simple que enviará una petición GET -->
+<form action="">
+  <label for="GET-name">Nombre :  </label>
+  <input id="GET-name" type="text" name="name" />
+  <input type="submit" value="Save" />
+</form>
+
+<!-- Formulario simple que enviará una petición POST -->
+<form action="" method="post">
+  <label for="POST-name">Apellido :</label>
+  <input id="POST-name" type="text" name="name" />
+  <input type="submit" value="Save" />
+</form>
+
+<!-- Formulario con conjunto de campos, leyenda y etiqueta -->
+<form action="" method="post">
+  <fieldset>
+    <legend>Título</legend>
+    <input type="radio" name="radio" id="radio" />
+    <label for="radio">Clic aquí</label>
+  </fieldset>
+</form>
+
+    <br>
+    <hr>  <!-- horizontal rule -->
+    <br> <!-- break line -->
+
+    <!-- hora este ejemplo es el del curso donde se utilizan contenedores/ la etiqueta div -->
+  <form action="#" method="post">
+
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" type="text" name="nombre">
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email">
+    </div>
+
+    <div>
+      <label for="mensaje">Mensaje:</label>
+      <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+  
+</body>
+
+</html>

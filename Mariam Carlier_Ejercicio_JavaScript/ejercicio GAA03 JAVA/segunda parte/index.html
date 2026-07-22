@@ -1,0 +1,31 @@
+<!-- SEGUNDA PARTE -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel ADSO SENA</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Panel de Control de Aprendices</h1>
+            <div class="stats" id="dashboard-stats">
+                <p>Total Activos: <span id="total-activos">0</span></p>
+            </div>
+        </header>
+
+        <section class="controls">
+            <button id="btn-load">Cargar Datos</button>
+            <button id="btn-filter-active">Ver Solo Activos</button>
+            <input type="text" id="search-input" placeholder="Buscar por nombre o tecnología...">
+        </section>
+
+        <main id="app-grid" class="grid">
+            <div class="placeholder-text">Haz clic en "Cargar Datos" para empezar...</div>
+        </main>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+:root {
+  --bg: #06080f;
+  --fg: #e8e4db;
+  --gold: #f0c040;
+  --accent: hsl(14, 100%, 50%);
+  --border: #48ff00;
+  --card: #0d1017;
+  --mono: "DM Mono", monospace;
+  --display: "Bebas Neue", sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 15px;
+}
+
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: var(--gold);
+  z-index: 1000;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+nav.scrolled {
+  background: rgba(6, 8, 15, 0.92);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--display);
+  font-size: 1.8rem;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.seccion {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+.sec-num {
+  font-family: var(--display);
+  font-size: 8rem;
+  opacity: 0.05;
+  line-height: 1;
+}
+.sec-titulo {
+  font-family: var(--display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.95;
+  margin-top: -1rem;
+}
+.sec-texto {
+  max-width: 540px;
+  margin-top: 1.5rem;
+  line-height: 2;
+  opacity: 0.45;
+  font-size: 0.85rem;
+}
+
+
+#scroll-pct {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-family: var(--display);
+  font-size: 3.5rem;
+  color: var(--gold);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 200;
+}
+#scroll-pct.visible {
+  opacity: 0.9;
+}

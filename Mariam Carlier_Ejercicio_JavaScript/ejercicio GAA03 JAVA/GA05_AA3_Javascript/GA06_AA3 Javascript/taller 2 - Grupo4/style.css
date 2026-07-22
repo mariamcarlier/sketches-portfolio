@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(91, 91, 143);
+    margin: 300px auto; /* Centra el contenedor en la pantalla */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+/* PISTA 👀: el problema tal vez está por aquí.... tal vez no */
+/*--se agrego un tipo de letra inicial--*/
+
+h1 {
+    display: block;
+    margin: 10px auto;
+    color: rgb(226, 223, 218);
+    padding: 5px;
+}
+button{
+    padding: 18px;
+    border-radius: 15px;
+    background-color: rgb(32, 32, 22);
+    color: aliceblue;
+    border: solid;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(235, 220, 245);
+    color: black;
+}

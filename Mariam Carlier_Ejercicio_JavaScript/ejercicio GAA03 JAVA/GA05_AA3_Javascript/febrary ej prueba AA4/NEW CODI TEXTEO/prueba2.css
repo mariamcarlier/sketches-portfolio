@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- HEADER --- */
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-adidas {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.contenedor nav a {
+    text-decoration: none;
+    color: #999;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contenedor nav a:hover {
+    color: white;
+}
+
+/* --- REGLA DE SECCIONES (100vh) --- */
+.pantalla-completa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.contenido-oscuro { background-color: #000; color: white; }
+.contenido-claro { background-color: #efefef; color: black; }
+
+/* --- BANNER PRINCIPAL (PARALLAX) --- */
+.banner-principal {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                      url("../im/bannneradidas.avif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* El efecto que viste en el video */
+}
+
+.titulo-1 {
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 0.8;
+    color: transparent;
+    -webkit-text-stroke: 2px #333;
+}
+
+/* --- CARRUSEL CORREGIDO --- */
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.carousel {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* Efecto imán */
+    scroll-behavior: smooth;
+}
+
+/* Ocultar barra de scroll */
+.carousel::-webkit-scrollbar { display: none; }
+
+.card {
+    flex: 0 0 320px; /* Ancho fijo para las tarjetas */
+    height: 450px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    scroll-snap-align: center; /* Se alinea al centro de la pantalla */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+}
+
+.card:hover { transform: translateY(-15px); }
+
+.card h3 {
+    padding: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la zapatilla sin deformarla */
+    background-color: #f9f9f9;
+}
+
+/* --- MARCADORES (PUNTOS BAJO EL CARRUSEL) --- */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.marker {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.marker:first-child { background-color: black; width: 30px; border-radius: 10px; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .card { flex: 0 0 85%; }
+    .titulo-1 { font-size: 4rem; }
+}

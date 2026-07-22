@@ -1,0 +1,50 @@
+
+body{
+  height: 100vh;
+  display: flex;
+   align-items: center;
+   background: linear-gradient(130deg, #000000 0%, color rebeccapurple 95% );
+  justify-content: center;
+  margin: 0;
+  background-size: 400% 400%;
+  animation: animadomovimiento 8s ease infinite;
+}
+
+@keyframes animadomovimiento {
+  0% {background-position: 0% 50%;
+  }
+
+  50% {background-position: 100% 50%;}
+  100% { background-position: 0% 50%;}
+}
+
+.animadocaja {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border: white 7px;
+  border-radius: 20px;
+
+  animation: mover 3s ease-in-out infinite alternate;
+  
+}
+
+
+@keyframes mover {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(250px);
+  }
+}
+
+.animadocaja:hover {
+  box-shadow: 0 0 25px blue,
+              0 0 50px blue,
+              0 0 100px blue;
+
+    transition: 0.3s;          
+
+}

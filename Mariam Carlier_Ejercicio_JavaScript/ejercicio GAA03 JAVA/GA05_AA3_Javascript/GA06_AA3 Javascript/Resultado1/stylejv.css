@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(165, 156, 34);
+}
+
+body{
+    background-color: rgb(250, 246, 215);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header
+
+
+
+.contenedor{
+        width: 20%;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 20px;
+
+    justify-content: center;
+    box-shadow: 0 10px 40px rgb(255, 233, 35);
+}
+
+.oculto {
+    display: none;
+}
